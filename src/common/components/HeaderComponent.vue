@@ -49,6 +49,11 @@ function logout() {
             <RouterLink to="/tasks" class="nav-link" exact-active-class="active">Tasks</RouterLink>
           </li>
 
+          <!-- POS: visible solo si está logueado -->
+          <li v-if="isLoggedIn" class="nav-item">
+            <RouterLink to="/pos" class="nav-link" exact-active-class="active">💰 POS</RouterLink>
+          </li>
+
           <li class="nav-item">
             <RouterLink to="/about" class="nav-link" exact-active-class="active">About</RouterLink>
           </li>

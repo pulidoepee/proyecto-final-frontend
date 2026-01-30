@@ -3,4 +3,5 @@ export type User = {
   email: string;
   fullName: string;
   isActive: boolean;
+  role: string;
 };

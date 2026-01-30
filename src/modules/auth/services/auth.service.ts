@@ -11,6 +11,7 @@ function mapAuthResponseToUser(data: AuthResponse): User {
     email: data.email,
     fullName: data.fullName ?? '',
     isActive: data.isActive ?? true,
+    role: data.role ?? 'cashier',
   };
 }
 

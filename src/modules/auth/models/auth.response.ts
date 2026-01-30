@@ -6,6 +6,7 @@ export type AuthResponse = {
   // register lo devuelve
   fullName?: string;
   isActive?: boolean;
+  role?: string;
 
   // login lo devuelve (pero NO lo usaremos)
   password?: string;

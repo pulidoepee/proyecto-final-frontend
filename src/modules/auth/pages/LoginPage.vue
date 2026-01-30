@@ -9,6 +9,7 @@ import { mapApiError } from '@/api/apiErrors';
 import type { LoginUserDto } from '@/modules/auth/models/login-user.dto';
 import { loginUser } from '@/modules/auth/services/auth.service';
 import { setToken, setUser } from '@/modules/auth/utils/token';
+import { refreshAuth } from '@/common/composables/useAuth';
 
 type LoginValues = LoginUserDto & { remember: boolean };
 
@@ -59,6 +60,7 @@ const onSubmit = handleSubmit(async (values) => {
 
     setToken(token, values.remember);
     setUser(user, values.remember);
+    refreshAuth();
 
     toast.success('Sesión iniciada correctamente');
     resetForm();

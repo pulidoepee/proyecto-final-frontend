@@ -1,6 +1,7 @@
 import { authRoutes } from '@/modules/auth/routes';
 import HomePage from '@/modules/landing/pages/HomePage.vue';
 import { tasksChildRoutes } from '@/modules/tasks/routes';
+import { posRoutes } from '@/modules/pos/routes';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -28,6 +29,7 @@ const router = createRouter({
       ],
     },
     authRoutes,
+    posRoutes,
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
